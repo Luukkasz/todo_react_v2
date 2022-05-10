@@ -20,6 +20,7 @@ form {
     justify-content: center;
     align-items: center;
 }
+
 form input,
 form button {
     padding: 0.5rem;
@@ -135,9 +136,58 @@ select {
     cursor: pointer;
     pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
+
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        margin-bottom: 80px;
+    }
+
+    form input,
+    form button{
+        font-size: 0.9rem;
+        border-radius: 0;
+    }
+
+    form input {
+        max-width: 150px;
+    }
+
+    .todo-item {
+        max-width: 250px;
+        overflow: auto;
+    }
+
+    .todo {
+        font-size: 1rem;
+        overflow: hidden;
+        height: 40px;
+    }
+
+    .filter-todo {
+        padding: 0.5rem;
+    }
+
+    select {
+        width: 8rem;
+    }
+
+    .select {
+        /*margin-bottom: 120px;*/
+    }
+
+    .select::after {
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.3rem;
+        background: #ff6f47;
+        cursor: pointer;
+        pointer-events: none;
+    }
 }
-*/
