@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function Form({setInputText, inputText, setTodos, setStatus}) {
 
@@ -8,16 +8,19 @@ function Form({setInputText, inputText, setTodos, setStatus}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setTodos(prevState => [
-            ...prevState,
-            {
-                id: Math.random() * 1000,
-                text: inputText,
-                completed: false,
-            }
-        ])
+        if (inputText.trim() !== "") {
+            setTodos(prevState => [
+                ...prevState,
+                {
+                    id: Math.random() * 1000,
+                    text: inputText,
+                    completed: false,
+                }
+            ])
 
-        setInputText('');
+            setInputText('');
+        }
+
     }
 
     const statusHandler = (e) => {
